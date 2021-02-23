@@ -6,5 +6,5 @@ export const CompletedChallenges: React.FC = () => {
       <span>Desafios completos</span>
       <span>5</span>
     </div>
-  )
-}
+  );
+};

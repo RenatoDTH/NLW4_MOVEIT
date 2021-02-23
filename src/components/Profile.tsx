@@ -5,12 +5,12 @@ export const Profile: React.FC = () => {
     <div className={styles.profileContainer}>
       <img src="https://github.com/renatodth.png" alt="Renato Castro" />
       <div>
-       <strong>Renato Castro</strong>
+        <strong>Renato Castro</strong>
         <p>
-         <img src="icons/level.svg" alt="Level" />
-         Level 1
-        </p> 
+          <img src="icons/level.svg" alt="Level" />
+          Level 1
+        </p>
       </div>
     </div>
-  )
-}
+  );
+};
