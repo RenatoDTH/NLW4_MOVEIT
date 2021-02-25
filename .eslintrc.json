@@ -62,6 +62,7 @@
     "import/no-extraneous-dependencies": "off",
     "consistent-return": "off",
     "no-restricted-syntax": "off",
+    "no-new": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/consistent-type-definition": "off",
