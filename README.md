@@ -7,7 +7,7 @@ Versão desktop do Move it com Typescript, React e NextJs com ensinamentos da [R
 
 ## Sobre o Move it
 
-O Move it é uma aplicação o qual te ajuda a se exercirtar após longas horas de trabalho em frente ao computador como os dedos ou a própria visão por exemplo.
+O Move it é uma aplicação que te ajuda a se exercitar após longas horas de trabalho em frente ao computador como os dedos ou a própria visão por exemplo.
 Nesta aplicação você dispara um countdown e após o término recebe um desafio a realizar para que você faça pausas durante o dia cansativo de trabalho.
 
 <div align="center" >
