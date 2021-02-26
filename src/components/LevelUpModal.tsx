@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { ChallengesContext } from '../contexts/ChallengesContext';
+import { ChallengesContext } from '../contexts';
 import styles from '../styles/components/LevelUpModal.module.css';
 
 export const LevelUpModal: React.FC = () => {

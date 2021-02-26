@@ -1,12 +1,13 @@
 import Head from 'next/head';
 import { GetServerSideProps } from 'next';
-import { ChallengeBox } from '../components/ChallengeBox';
-import { CompletedChallenges } from '../components/CompletedChallenges';
-import { Countdown } from '../components/Countdown';
-import { ExperienceBar } from '../components/ExperienceBar';
-import { Profile } from '../components/Profile';
-import { CountdownProvider } from '../contexts/CountdownContext';
-import { ChallengesProvider } from '../contexts/ChallengesContext';
+import {
+  ChallengeBox,
+  CompletedChallenges,
+  Countdown,
+  ExperienceBar,
+  Profile,
+} from '../components';
+import { ChallengesProvider, CountdownProvider } from '../contexts';
 import styles from '../styles/pages/Home.module.css';
 
 interface HomeProps {
