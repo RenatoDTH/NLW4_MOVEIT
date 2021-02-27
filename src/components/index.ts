@@ -4,3 +4,4 @@ export * from './Countdown';
 export * from './ExperienceBar';
 export * from './LevelUpModal';
 export * from './Profile';
+export * from './SideBar';

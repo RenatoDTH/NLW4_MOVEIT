@@ -1,0 +1,22 @@
+.sideBar {
+  background: var(--white);
+  padding: 2rem;
+  display: flex;
+  height: 100vh;
+  max-width: 112px;
+  flex-direction: column;
+  left: 0;
+  justify-content: space-between;
+}
+
+.sideBar img {
+  width: 3rem;
+  height: 2.625rem;
+}
+
+.sideBar button {
+  border: 0;
+  background: var(--white);
+}
+
+
