@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import React from 'react';
 import { GetServerSideProps } from 'next';
 import {
   ChallengeBox,
@@ -16,7 +17,7 @@ interface HomeProps {
   challengesCompleted: number;
 }
 
-export default function Home(props: HomeProps) {
+const Home: React.FC<HomeProps> = (props) => {
   return (
     <ChallengesProvider
       level={props.level}
@@ -45,7 +46,7 @@ export default function Home(props: HomeProps) {
       </div>
     </ChallengesProvider>
   );
-}
+};
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
@@ -58,3 +59,5 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     },
   };
 };
+
+export default Home;
