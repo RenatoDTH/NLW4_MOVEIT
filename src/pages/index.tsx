@@ -16,9 +16,11 @@ interface HomeProps {
   level: number;
   currentExperience: number;
   challengesCompleted: number;
+  // eslint-disable-next-line react/no-unused-prop-types
+  user: string;
 }
 
-const Home: React.FC<HomeProps> = (props) => {
+const Home: React.FC<HomeProps> = (props: HomeProps) => {
   return (
     <ChallengesProvider
       level={props.level}
@@ -54,7 +56,21 @@ const Home: React.FC<HomeProps> = (props) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
+  const {
+    level,
+    currentExperience,
+    challengesCompleted,
+    user,
+  } = ctx.req.cookies;
+
+  if (user === undefined) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: '/login',
+      },
+    };
+  }
 
   return {
     props: {

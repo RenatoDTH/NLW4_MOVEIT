@@ -1,7 +1,23 @@
 import Head from 'next/head';
+import { GetServerSideProps } from 'next';
+import { ChangeEvent, useContext, useState } from 'react';
+import { AuthContext } from '../contexts';
+
 import styles from '../styles/pages/Login.module.css';
 
-const Login: React.FC = () => {
+const Login: React.FC = (props) => {
+  const [userName, setUserName] = useState('');
+
+  const { signIn } = useContext(AuthContext);
+
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setUserName(event.target.value.trim());
+  };
+
+  const handleSubmit = async () => {
+    signIn(userName);
+  };
+
   return (
     <>
       <Head>
@@ -22,9 +38,13 @@ const Login: React.FC = () => {
             <p>Faça login com seu Github para começar</p>
           </div>
           <div>
-            <form onSubmit={() => {}}>
-              <input type="text" placeholder="Digite seu username" />
-              <button disabled type="submit">
+            <form>
+              <input
+                type="text"
+                onChange={handleInputChange}
+                placeholder="Digite seu username"
+              />
+              <button disabled={!userName} type="button" onClick={handleSubmit}>
                 <img src="/icons/right-arrow.svg" alt="entrar" />
               </button>
             </form>
@@ -33,6 +53,21 @@ const Login: React.FC = () => {
       </div>
     </>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { user } = ctx.req.cookies;
+  if (user !== undefined) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: '/',
+      },
+    };
+  }
+  return {
+    props: {},
+  };
 };
 
 export default Login;
