@@ -19,4 +19,21 @@
   background: var(--white);
 }
 
+@media (max-width: 650px) {
+  .sideBar {
+    display: relative;
+    max-width: 100%;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 50px;
+    align-items: center;
+  }
+
+  .sideBar img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
 
