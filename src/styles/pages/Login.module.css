@@ -130,3 +130,66 @@
 
 }
 
+@media (max-width: 735px) {
+  .container {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .container div:first-child {
+    display: none;
+  }
+
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .section > img {
+    width: 15rem;
+    height:4rem;
+    margin-bottom: 6rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section strong {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.875rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+
+  .section > div img {
+    display: flex;
+    flex: 1;
+    width: 2rem;
+    height: 2rem;
+    align-self: center;
+  }
+
+  .section  > div p {
+    width: 10rem;
+    color: var(--white);
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+
+  .section input {
+  height: 3rem;
+  width: 15rem;
+  padding: 1.4375rem 1.895rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  }
+
+  .section button {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+

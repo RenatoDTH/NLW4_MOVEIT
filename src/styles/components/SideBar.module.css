@@ -21,9 +21,8 @@
 
 @media (max-width: 650px) {
   .sideBar {
-    display: relative;
+    display: flex;
     max-width: 100%;
-    text-align: center;
     justify-content: space-between;
     flex-direction: row;
     height: 50px;
